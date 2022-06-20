@@ -43,8 +43,16 @@ export default function PDF() {
   docs.setFontSize(24);
   docs.text("Dr. Ashish Soy", 10, 10);
   docs.setFontSize(12);
-  docs.text("Address", 10, 20);
-  docs.text("Phone", 10, 30);
+  // var splitAddress = docs.splitTextToSize(
+  //   "Lake Avenue, Kanke Road, Ranchi - 834008, Near Realince Mart",
+  //   20
+  // );
+  docs.text(
+    "Lake Avenue, Kanke Road, Ranchi - 834008, Near Realince Mart",
+    10,
+    20
+  );
+  docs.text("9204752383, 9835513100", 10, 30);
   docs.line(10, 40, 200, 40);
 
   docs.text(`Your appointment with ${doctor} is confirmed.`, 10, 50);
